@@ -1,0 +1,9 @@
+$ curl -s -b cookies.txt -X PUT "http://localhost:4000/customer/auth/review/1?review=Great%20book"
+{"message":"The review for the book with ISBN 1 has been added/updated","reviews":{"yusuf":"Great book"}}
+
+$ curl -s -b cookies.txt -X PUT "http://localhost:4000/customer/auth/review/1?review=Amazing%20classic%2C%20highly%20recommended"
+{"message":"The review for the book with ISBN 1 has been added/updated","reviews":{"yusuf":"Amazing classic, highly recommended"}}
+
+$ curl -s -b cookies2.txt -X PUT "http://localhost:4000/customer/auth/review/1?review=Not%20bad"
+{"message":"The review for the book with ISBN 1 has been added/updated","reviews":{"yusuf":"Amazing classic, highly recommended","ayse":"Not bad"}}
+
